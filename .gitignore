@@ -1,0 +1,8 @@
+# .gitignore content
+*.class
+*.log
+.classpath
+.project
+.settings/
+target/
+bin/

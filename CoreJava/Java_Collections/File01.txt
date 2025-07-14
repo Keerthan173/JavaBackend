@@ -1,0 +1,25 @@
+✅ COLLECTIONS FRAMEWORK IN JAVA
+ * -----------------------------------
+ * 🔹 Java Collections Framework (JCF) provides classes and interfaces to store and manipulate groups of objects.
+ * 🔸 All collection classes are in `java.util` package.
+ *
+ * 🔹 MAIN INTERFACES:
+ * -------------------------------------
+ * 1. Collection (root interface)
+ *     |
+ *     ├── List     → Ordered, allows duplicates
+ *     |     ├── ArrayList
+ *     |     ├── LinkedList
+ *     |     └── Vector / Stack
+ *     |
+ *     ├── Set      → No duplicates
+ *     |     ├── HashSet (unordered)
+ *     |     └── TreeSet (sorted)
+ *     |
+ *     └── Queue    → Follows FIFO
+ *           └── PriorityQueue
+ *
+ * 🔸 Map (separate interface, not part of Collection)
+ *     ├── HashMap
+ *     ├── LinkedHashMap
+ *     └── TreeMap

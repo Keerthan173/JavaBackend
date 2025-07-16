@@ -1,8 +1,29 @@
-# .gitignore content
+# Ignore compiled class files
 *.class
+
+# Ignore build directories
+/bin/
+/target/
+/out/
+
+# Ignore Maven's local dependency folder
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Log files
 *.log
+
+# IDE-specific
 .classpath
 .project
 .settings/
-target/
-bin/
+.vscode/
+.idea/
+*.iml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment or config files
+*.env

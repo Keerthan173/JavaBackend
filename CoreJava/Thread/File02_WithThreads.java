@@ -1,4 +1,6 @@
-class A extends Thread {
+package Thread;
+
+class A2 extends Thread {
     public void run() {
         for (int i = 1; i <= 100; i++) {
             System.out.println("Hi");
@@ -6,18 +8,18 @@ class A extends Thread {
     }
 }
 
-class B extends Thread {
+class B2 extends Thread {
     public void run() {
-        for (int i = 1; i <= 100; i++) {
+        for (int i = 1; i <= 1000; i++) {
             System.out.println("Hello");
         }
     }
 }
 
-public class File11_WithThreads {
+public class File02_WithThreads {
     public static void main(String[] args) {
-        A obj1 = new A();
-        B obj2 = new B();
+        A2 obj1 = new A2();
+        B2 obj2 = new B2();
 
         obj1.start();  // Starts thread for A
         obj2.start();  // Starts thread for B
@@ -41,5 +43,5 @@ Hi
 Hi
 Hello
 ...
-(200 total lines: 100 Hi + 100 Hello)
+(2000 total lines: 1000 Hi + 1000 Hello)
  */

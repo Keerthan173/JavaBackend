@@ -1,4 +1,4 @@
-/*
+package Thread;/*
  * ✅ WHY THREADS ARE NEEDED IN JAVA
  * ---------------------------------
  * 🔹 Problem:
@@ -8,7 +8,7 @@
  * 
  */
 
-class A {
+class A1 {
     public void show() {
         for (int i = 1; i <= 100; i++) {
             System.out.println("Hi");
@@ -16,7 +16,7 @@ class A {
     }
 }
 
-class B {
+class B1 {
     public void show() {
         for (int i = 1; i <= 100; i++) {
             System.out.println("Hello");
@@ -24,10 +24,10 @@ class B {
     }
 }
 
-public class File10_WhyThreads {
+public class File01_WhyThreads {
     public static void main(String[] args) {
-        A obj1 = new A();
-        B obj2 = new B();
+        A1 obj1 = new A1();
+        B1 obj2 = new B1();
 
         // Runs one after another (not in parallel)
         obj1.show(); // prints Hi 100 times

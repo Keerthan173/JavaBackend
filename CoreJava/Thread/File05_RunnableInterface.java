@@ -1,4 +1,4 @@
-/*
+package Thread;/*
  * Runnable is a functional interface with one method: `run()`.
  * 🔹 Instead of extending Thread, we implement Runnable.
  * 🔹 This is preferred because:
@@ -12,7 +12,7 @@
  * 4. Call start()
  */
 
-class A implements Runnable {
+class A3 implements Runnable {
     public void run() {
         for (int i = 1; i <= 5; i++) {
             System.out.println("Hi");
@@ -25,7 +25,7 @@ class A implements Runnable {
     }
 }
 
-class B implements Runnable {
+class B3 implements Runnable {
     public void run() {
         for (int i = 1; i <= 5; i++) {
             System.out.println("Hello");
@@ -38,10 +38,10 @@ class B implements Runnable {
     }
 }
 
-public class File14_RunnableInterface {
+public class File05_RunnableInterface {
     public static void main(String[] args) {
-        Runnable obj1 = new A();
-        Runnable obj2 = new B();
+        Runnable obj1 = new A3();
+        Runnable obj2 = new B3();
 
         Thread t1 = new Thread(obj1);  // Create thread from Runnable
         Thread t2 = new Thread(obj2);

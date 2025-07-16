@@ -1,4 +1,4 @@
-/*
+package Thread;/*
  * THREADS USING LAMBDA EXPRESSIONS
  * ------------------------------------
  * 🔹 Runnable is a Functional Interface → eligible for lambda usage.
@@ -7,7 +7,7 @@
  * 🔹 Syntax: Runnable r = () -> { code };
  */
 
-public class File15_RunnableLambda {
+public class File06_RunnableLambda {
     public static void main(String[] args) {
 
         // 🔹 Lambda for thread 1

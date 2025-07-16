@@ -1,19 +1,17 @@
-/*
-*  Synchronization is used to prevent race conditions in multithreading.
- * The `synchronized` keyword ensures that only one thread can access
- *    the method (or block) at a time for the same object.
+package Thread;/*
+ *  A Race Condition happens when two or more threads access a shared resource (like a variable)
+ *    and try to modify it at the same time — leading to incorrect or unexpected results.
  *
- * 🔸 In this example:
- * - Two threads increment the `count` 10,000 times each
- * - With synchronization, the final count is always 20000 ✅
+ * 🔹 In this example:
+ *   - Two threads increment `count` 10,000 times each (expected total = 20,000)
+ *   - But the result is sometimes less (e.g., 17900) due to lost updates.
  */
 
 class Counter {
     private int count;
 
-    // 🔐 Synchronized method — thread-safe
-    public synchronized void increment() {
-        count++;
+    public void increment() {
+        count++;  // ❌ Not atomic — causes race condition
     }
 
     public int getCounter() {
@@ -21,7 +19,7 @@ class Counter {
     }
 }
 
-public class File17_Synchronized {
+public class File07_RaceCondition {
     public static void main(String[] args) throws InterruptedException {
         Counter c = new Counter();
 
@@ -46,11 +44,11 @@ public class File17_Synchronized {
         t1.start();
         t2.start();
 
-        // 🔹 Wait for threads to complete
+        // 🔹 Wait for both threads to finish
         t1.join();
         t2.join();
 
-        // ✅ Correct final count (20000 expected)
+        // 🔹 Final count should be 20000 — but it’s often less due to race condition
         System.out.println("Final Count: " + c.getCounter());
     }
 }

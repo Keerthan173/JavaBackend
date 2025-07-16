@@ -1,4 +1,4 @@
-/*
+package Thread;/*
  * 🔹 Thread.sleep(ms) pauses the current thread for given milliseconds.
  * 🔹 It is used to:
  *    - Slow down thread output (e.g., for animations or demo)
@@ -34,7 +34,7 @@ class B extends Thread {
     }
 }
 
-public class File13_ThreadSleep {
+public class File04_ThreadSleep {
     public static void main(String[] args) {
         A obj1 = new A();
         B obj2 = new B();

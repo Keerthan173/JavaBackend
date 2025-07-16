@@ -1,4 +1,4 @@
-/*
+package Thread;/*
  * 🔹 Java threads have priorities from 1 to 10:
  *    - Thread.MIN_PRIORITY = 1
  *    - Thread.NORM_PRIORITY = 5 (default)
@@ -12,7 +12,7 @@
  *    - getPriority()
  */
 
-class A extends Thread {
+class A5 extends Thread {
     public void run() {
         for (int i = 1; i <= 100; i++) {
             System.out.println("Hi");
@@ -20,7 +20,7 @@ class A extends Thread {
     }
 }
 
-class B extends Thread {
+class B5 extends Thread {
     public void run() {
         for (int i = 1; i <= 100; i++) {
             System.out.println("Hello");
@@ -28,10 +28,10 @@ class B extends Thread {
     }
 }
 
-public class File12_ThreadPriority {
+public class File03_ThreadPriority {
     public static void main(String[] args) {
-        A obj1 = new A();
-        B obj2 = new B();
+        A5 obj1 = new A5();
+        B5 obj2 = new B5();
 
         // 🔹 Setting priorities
         obj1.setPriority(Thread.MIN_PRIORITY);    // Priority 1

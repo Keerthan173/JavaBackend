@@ -1,28 +1,26 @@
-# Ignore compiled class files
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+gen/
+*.ipr
+
+# VS Code
+.vscode/
+
+# Java class files
 *.class
 
-# Ignore build output
-/target/
-/bin/
-/out/
-/build/
-
-# IDE and config files
-.classpath
-.project
-.settings/
-/.vscode/
+# Log files
 *.log
-*.env
-*.lst
-*.xml
-*.jar
-pom.properties
 
-# Ignore all txt files except inside CoreJava
-*.txt
-!CoreJava/**/*.txt
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*.swo
 
-# Ignore Maven wrapper folder except the jar
-.mvn/
-!.mvn/wrapper/maven-wrapper.jar
+# OS-specific
+.DS_Store
+Thumbs.db

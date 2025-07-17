@@ -17,7 +17,7 @@ package Java_Collections;
 import java.util.*;
 
 // 🔹 Class implementing Comparable (natural order: by marks)
-class Student implements Comparable<Student> {
+class Student implements Comparable<Student1> {
     int id;
     String name;
     int marks;
@@ -29,7 +29,7 @@ class Student implements Comparable<Student> {
     }
 
     @Override
-    public int compareTo(Student other) {
+    public int compareTo(Student1 other) {
         return this.marks - other.marks;  // ascending
     }
 
@@ -40,34 +40,34 @@ class Student implements Comparable<Student> {
 }
 
 // 🔸 Comparator for sorting by name
-class SortByName implements Comparator<Student> {
-    public int compare(Student a, Student b) {
+class SortByName implements Comparator<Student1> {
+    public int compare(Student1 a, Student1 b) {
         return a.name.compareTo(b.name);
     }
 }
 
 public class File10_ComparableVsComparator {
     public static void main(String[] args) {
-        List<Student> list = new ArrayList<>();
-        list.add(new Student(103, "Zara", 75));
-        list.add(new Student(101, "Amit", 90));
-        list.add(new Student(102, "John", 85));
+        List<Student1> list = new ArrayList<>();
+        list.add(new Student1(103, "Zara", 75));
+        list.add(new Student1(101, "Amit", 90));
+        list.add(new Student1(102, "John", 85));
 
         System.out.println("Original List:");
-        for (Student s : list)
+        for (Student1 s : list)
             System.out.println(s);
 
         // ✅ Sort by natural order (Comparable - marks)
         Collections.sort(list);
         System.out.println("\nSorted by Marks (Comparable):");
-        for (Student s : list)
+        for (Student1 s : list)
             System.out.println(s);
 
 
         // ✅ Sort by name (Comparator)
-        Collections.sort(list, new SortByName());
+        Collections.sort(list, new SortByName2());
         System.out.println("\nSorted by Name (Comparator):");
-        for (Student s : list)
+        for (Student1 s : list)
             System.out.println(s);
 
     }

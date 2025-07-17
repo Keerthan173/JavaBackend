@@ -16,12 +16,12 @@ package Java_Collections;
 import java.util.*;
 
 // 🔹 Custom class
-class Student {
+class Student2 {
     int id;
     String name;
     int marks;
 
-    Student(int id, String name, int marks) {
+    Student2(int id, String name, int marks) {
         this.id = id;
         this.name = name;
         this.marks = marks;
@@ -33,8 +33,8 @@ class Student {
 }
 
 // 🔹 Comparator to sort by marks
-class SortByMarks implements Comparator<Student> {
-    public int compare(Student s1, Student s2) {
+class SortByMarks implements Comparator<Student1> {
+    public int compare(Student1 s1, Student1 s2) {
         // if(s1.marks > s2.marks) return 1;
         // if(s1.marks < s2.marks) return -1;
         // return 0;
@@ -43,36 +43,36 @@ class SortByMarks implements Comparator<Student> {
 }
 
 // 🔹 Comparator to sort by name
-class SortByName implements Comparator<Student> {
-    public int compare(Student s1, Student s2) {
+class SortByName2 implements Comparator<Student1> {
+    public int compare(Student1 s1, Student1 s2) {
         return s1.name.compareTo(s2.name); // Lexicographical order
     }
 }
 
 public class File08_Comparator {
     public static void main(String[] args) {
-        List<Student> list = new ArrayList<>();
-        list.add(new Student(101, "Keerthan K", 78));
-        list.add(new Student(105, "Dhoni", 90));
-        list.add(new Student(102, "Mahesh", 85));
+        List<Student1> list = new ArrayList<>();
+        list.add(new Student1(101, "Keerthan K", 78));
+        list.add(new Student1(105, "Dhoni", 90));
+        list.add(new Student1(102, "Mahesh", 85));
 
         System.out.println("Original List:");
-        for (Student s : list)
+        for (Student1 s : list)
             System.out.println(s);
 
         SortByMarks sort1 = new SortByMarks();
-        SortByName sort2 = new SortByName();
+        SortByName2 sort2 = new SortByName2();
 
         // 🔹 Sort by marks
         Collections.sort(list, sort1);
         System.out.println("\nSorted by Marks:");
-        for (Student s : list)
+        for (Student1 s : list)
             System.out.println(s);
 
         // 🔹 Sort by name
         Collections.sort(list, sort2);
         System.out.println("\nSorted by Name:");
-        for (Student s : list)
+        for (Student1 s : list)
             System.out.println(s);
     }
 }

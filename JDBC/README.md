@@ -6,15 +6,18 @@ JDBC is a Java API that allows Java programs to connect and interact with relati
 
 
 Four Types of JDBC Drivers
+---
 
-Type 1: JDBC-ODBC Bridge Driver - Converts JDBC calls into ODBC calls, which then go to the database. Slow & outdated.
-Type 2: Native-API Driver - Converts JDBC calls into native C/C++ DB API. Needs native libraries. OS-dependent.
-Type 3: Network Protocol Driver - Sends JDBC calls to a middleware server, which talks to the database. Rarely used.
-Type 4: Thin Driver (Pure Java) - Talks directly to the DB using Java & DB protocol. Fast, portable. Used in real apps.
+- Type 1: JDBC-ODBC Bridge Driver - Converts JDBC calls into ODBC calls, which then go to the database. Slow & outdated.
+- Type 2: Native-API Driver - Converts JDBC calls into native C/C++ DB API. Needs native libraries. OS-dependent.
+- Type 3: Network Protocol Driver - Sends JDBC calls to a middleware server, which talks to the database. Rarely used.
+- Type 4: Thin Driver (Pure Java) - Talks directly to the DB using Java & DB protocol. Fast, portable. Used in real apps.
 
 
 Which One Do We Use?
-Type 4 (Thin Driver) — 
+--
+Type 4 (Thin Driver) 
+-
     Class.forName("com.mysql.cj.jdbc.Driver");
 It is pure Java, no installation needed, and connects directly to the database.
 
@@ -52,6 +55,7 @@ It is pure Java, no installation needed, and connects directly to the database.
     ```
 
 3. Set up JDBC in your Java project:
+   -
    🔹 Step 1: Download MySQL JDBC Driver
         Go to the official site: https://dev.mysql.com/downloads/connector/j/
         Download the platform-independent ZIP archive.
@@ -64,14 +68,14 @@ It is pure Java, no installation needed, and connects directly to the database.
         Select the mysql-connector-j-8.0.xx.jar file you downloaded.
         Click OK and apply.
 
-4. Update the following in your Java file:
+5. Update the following in your Java file:
     ```java
     private static final String url = "jdbc:mysql://localhost:3306/lenden";
     private static final String username = "root";
     private static final String password = "";
     ```
 
-5. Compile and run:
+6. Compile and run:
     ```bash
     javac Main.java
     java Main
